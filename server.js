@@ -1,6 +1,7 @@
 const express = require("express"); //commonJS module import
 
 const zoosRouter = require("./zoos/zoos-router.js");
+const bearsRouter = require("./bears/bears-router.js");
 
 const server = express();
 
@@ -12,5 +13,6 @@ server.get("/", (req, res) => {
 });
 
 server.use("/api/zoos", zoosRouter);
+server.use("/api/bears", bearsRouter);
 
 module.exports = server; //CommonJS module server
